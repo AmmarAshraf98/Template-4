@@ -362,6 +362,7 @@ ul {
 /* start tickets */
 .tickets .ticket-holder {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    flex-wrap: wrap;
 }
 
 .tickets .ticket-holder .box {
@@ -459,6 +460,12 @@ ul {
     background-color: var(--blue-color);
     left: 10px;
     top: 0;
+}
+
+@media (max-width:767px) {
+    .project ul::before {
+        height: 95%;
+    }
 }
 
 .project ul li {
@@ -894,6 +901,12 @@ ul {
     .profile-page .over-view {
         flex-direction: column;
     }
+
+    .profile-page {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 }
 
 .profile-page .over-view .avatar-box {
@@ -1161,11 +1174,10 @@ ul {
 
 .courses-page .course {
     overflow: hidden;
-
 }
 
 @media (max-width:767px) {
-    .courses-page .course {
+    .courses-page {
         grid-template-columns: minmax(200px, 1fr);
         gap: 10px;
         margin-left: 10px;
@@ -1272,6 +1284,8 @@ ul {
 .file-page {
     flex-direction: row-reverse;
     align-items: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 @media (max-width:767px) {
